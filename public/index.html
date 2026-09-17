@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Диана Carajelaeasco — свадебный фотограф в Москве</title>
+<meta name="description" content="Свадебный фотограф в Москве. Кинематографичная съёмка вашего дня. 4 часа — 30 000 ₽. Запишитесь на съёмку.">
+<style>
+  :root{
+    --bg:#f1ead9;
+    --bg2:#e7dcc4;
+    --ink:#2a1f17;
+    --ink-soft:#5b4a3a;
+    --line:#c8b89a;
+    --gold:#a87a4f;
+    --gold-deep:#7a5430;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font:17px/1.65 Georgia, 'Times New Roman', serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block}
+  a{color:var(--gold-deep);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;
+    min-height:88vh;
+    display:flex;
+    align-items:flex-end;
+    background:#1a1410 url('/generated/8ba7940e38a617a1fd44ac517c5197d3.jpg') center/cover no-repeat;
+    color:#f4ead2;
+  }
+  .hero::after{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(20,14,8,.15) 0%, rgba(20,14,8,.55) 70%, rgba(20,14,8,.85) 100%);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative;z-index:1;padding:48px 0 56px;max-width:680px}
+  .hero-eyebrow{
+    font:600 12px/1 system-ui,sans-serif;
+    letter-spacing:.32em;text-transform:uppercase;
+    color:#e8d3a8;margin-bottom:18px;
+  }
+  .hero h1{
+    font:400 clamp(38px,8vw,72px)/1.05 Georgia,serif;
+    margin:0 0 18px;letter-spacing:.005em;
+  }
+  .hero h1 em{font-style:italic;color:#f0d9a8}
+  .hero p{
+    font-size:18px;line-height:1.55;color:#ecdfc4;
+    margin:0 0 32px;max-width:540px;
+  }
+  .btn{
+    display:inline-block;padding:16px 28px;
+    background:#f4ead2;color:#2a1f17;
+    font:600 14px/1 system-ui,sans-serif;
+    letter-spacing:.14em;text-transform:uppercase;
+    border:none;cursor:pointer;
+    transition:transform .15s ease, background .15s ease;
+  }
+  .btn:hover{background:#fff;transform:translateY(-1px);text-decoration:none}
+  .btn-outline{
+    background:transparent;color:#f4ead2;border:1px solid rgba(244,234,210,.6);
+  }
+  .btn-outline:hover{background:rgba(244,234,210,.1);color:#fff}
+
+  /* ===== SECTIONS ===== */
+  section{padding:96px 0}
+  .section-eyebrow{
+    font:600 11px/1 system-ui,sans-serif;
+    letter-spacing:.32em;text-transform:uppercase;
+    color:var(--gold);margin-bottom:14px;
+  }
+  h2{
+    font:400 clamp(30px,5vw,46px)/1.15 Georgia,serif;
+    margin:0 0 24px;letter-spacing:.005em;
+  }
+  h2 em{font-style:italic;color:var(--gold)}
+  .lead{font-size:18px;line-height:1.65;color:var(--ink-soft);max-width:680px;margin:0 0 24px}
+  .divider{height:1px;background:var(--line);margin:0 auto;max-width:1080px}
+
+  /* ===== ABOUT ===== */
+  .about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
+  .about-photo{
+    aspect-ratio:3/4;
+    background:#3a2a1a url('/generated/9f3462bb8eb28488f710ab16843076a1.jpg') center/cover no-repeat;
+    box-shadow:0 30px 60px -30px rgba(60,40,20,.4);
+  }
+
+  /* ===== PACKAGE ===== */
+  .package{
+    background:var(--bg2);
+    border:1px solid var(--line);
+    padding:48px 40px;max-width:640px;
+  }
+  .package .price{
+    font:400 clamp(40px,7vw,56px)/1 Georgia,serif;color:var(--ink);
+    margin:8px 0 4px;
+  }
+  .package .price small{font-size:18px;color:var(--ink-soft)}
+  .package ul{list-style:none;padding:0;margin:28px 0 0}
+  .package li{
+    padding:14px 0;border-top:1px solid rgba(122,84,48,.2);
+    display:flex;gap:14px;align-items:flex-start;
+  }
+  .package li::before{
+    content:'';flex:none;width:6px;height:6px;margin-top:11px;
+    background:var(--gold);border-radius:50%;
+  }
+  .package li:last-child{border-bottom:1px solid rgba(122,84,48,.2)}
+
+  /* ===== GALLERY ===== */
+  .gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:8px}
+  .g{
+    background:#2a1f17 center/cover no-repeat;
+    position:relative;overflow:hidden;
+    transition:transform .4s ease;
+  }
+  .g:hover{transform:scale(1.01)}
+  .g1{grid-column:span 7;aspect-ratio:16/10}
+  .g2{grid-column:span 5;aspect-ratio:4/5}
+  .g3{grid-column:span 5;aspect-ratio:4/5}
+  .g4{grid-column:span 7;aspect-ratio:16/10}
+  .g5{grid-column:span 12;aspect-ratio:21/9}
+  /* film-tone placeholder tiles */
+  .tone1{background:linear-gradient(135deg,#3a2a1c 0%,#7a5430 50%,#c89868 100%)}
+  .tone2{background:linear-gradient(135deg,#2a1f15 0%,#5b4030 60%,#a87a4f 100%)}
+  .tone3{background:linear-gradient(135deg,#4a3525 0%,#8a6545 100%)}
+  .tone4{background:linear-gradient(135deg,#1a1410 0%,#3a2a1c 50%,#b8956a 100%)}
+
+  /* ===== STEPS ===== */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:8px;border-top:1px solid var(--line)}
+  .step{padding:32px 24px 8px;border-right:1px solid var(--line);position:relative}
+  .step:last-child{border-right:none}
+  .step-num{
+    font:400 14px/1 Georgia,serif;color:var(--gold);
+    letter-spacing:.2em;margin-bottom:18px;
+  }
+  .step h3{font:400 20px/1.2 Georgia,serif;margin:0 0 10px}
+  .step p{font-size:15px;color:var(--ink-soft);margin:0}
+
+  /* ===== FORM ===== */
+  .form-wrap{max-width:560px}
+  .form-row{margin-bottom:18px}
+  .form-row label{display:block;font:600 12px/1 system-ui,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:8px}
+  .form-row input, .form-row textarea, .form-row select{
+    width:100%;padding:14px 16px;
+    background:transparent;border:1px solid var(--line);
+    color:var(--ink);font:16px/1.4 Georgia,serif;
+    border-radius:0;outline:none;
+    transition:border-color .15s ease;
+  }
+  .form-row input:focus, .form-row textarea:focus, .form-row select:focus{border-color:var(--gold-deep)}
+  .form-row textarea{min-height:110px;resize:vertical}
+  .form-status{margin-top:16px;font-size:15px;color:var(--ink-soft)}
+  .form-status.ok{color:var(--gold-deep)}
+  .form-status.err{color:#8a2f1f}
+
+  /* ===== CONTACT ===== */
+  .contact{text-align:center;padding:120px 0}
+  .contact .tg{
+    font:400 clamp(28px,5vw,40px)/1.2 Georgia,serif;
+    color:var(--ink);margin:8px 0 32px;
+  }
+  .contact .tg a{color:var(--gold-deep);font-style:italic}
+  .contact .meta{color:var(--ink-soft);font-size:14px;letter-spacing:.04em}
+
+  footer{padding:40px 0;border-top:1px solid var(--line);text-align:center;font-size:13px;color:var(--ink-soft);letter-spacing:.04em}
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width:780px){
+    section{padding:64px 0}
+    .about-grid{grid-template-columns:1fr;gap:32px}
+    .about-photo{order:-1;aspect-ratio:4/5}
+    .steps{grid-template-columns:1fr 1fr}
+    .step:nth-child(2n){border-right:none}
+    .step{padding:24px 18px 0}
+    .package{padding:36px 24px}
+    .gallery{grid-template-columns:repeat(6,1fr)}
+    .g1,.g4{grid-column:span 6;aspect-ratio:16/10}
+    .g2,.g3{grid-column:span 3;aspect-ratio:1/1}
+    .g5{grid-column:span 6;aspect-ratio:4/3}
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Свадебный фотограф · Москва</div>
+      <h1>Диана <em>Carajelaeasco</em></h1>
+      <p>Снимаю день вашей свадьбы так, чтобы кадры звучали как кино — мягким светом, тишиной и вниманием к настоящим моментам между вами.</p>
+      <a class="btn" href="https://t.me/z_jennifer" target="_blank" rel="noopener">Записаться на съёмку</a>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section>
+  <div class="wrap about-grid">
+    <div>
+      <div class="section-eyebrow">Обо мне</div>
+      <h2>Фотограф, который <em>слышит день</em></h2>
+      <p class="lead">Мне важно не «отработать смену», а поймать настоящую историю вашей пары — взгляды, прикосновения, смех сквозь слёзы. Снимаю в спокойной, ненавязчивой манере, чтобы вы могли быть собой и не думать о камере.</p>
+      <p>Кинематографичный стиль — это тёплые тона, мягкий естественный свет и лёгкая плёночная фактура. Кадры, к которым хочется возвращаться спустя годы.</p>
+    </div>
+    <div class="about-photo" aria-label="Кадр со съёмки"></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PACKAGE -->
+<section>
+  <div class="wrap">
+    <div class="section-eyebrow">Формат</div>
+    <h2>Съёмочный день — <em>просто и понятно</em></h2>
+    <p class="lead">Один формат, который подходит большинству пар: 4 часа рядом с вами в самые живые моменты дня.</p>
+
+    <div class="package">
+      <div class="section-eyebrow">Свадебная съёмка</div>
+      <div class="price">30 000 ₽<small> · 4 часа</small></div>
+      <ul>
+        <li>4 часа съёмки в день свадьбы — сборы, церемония, прогулка, банкет.</li>
+        <li>Предварительная встреча онлайн, чтобы познакомиться и обсудить ваш день.</li>
+        <li>Все удачные кадры в авторской обработке — без водяных знаков, в высоком разрешении.</li>
+        <li>Готовые фотографии в течение 3–4 недель на удобной ссылке.</li>
+        <li>Территория съёмки — Москва. Выезд за МКАД обсуждается отдельно.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- GALLERY -->
+<section>
+  <div class="wrap">
+    <div class="section-eyebrow">Кадры</div>
+    <h2>Несколько <em>мгновений</em></h2>
+    <p class="lead">Скоро здесь появятся ваши реальные кадры — а пока можно заглянуть в настроение съёмок.</p>
+
+    <div class="gallery">
+      <div class="g g1" style="background-image:url('/generated/8ba7940e38a617a1fd44ac517c5197d3.jpg')"></div>
+      <div class="g g2" style="background-image:url('/generated/9f3462bb8eb28488f710ab16843076a1.jpg')"></div>
+      <div class="g g3 tone1"></div>
+      <div class="g g4 tone2"></div>
+      <div class="g g5 tone3"></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- STEPS -->
+<section>
+  <div class="wrap">
+    <div class="section-eyebrow">Как проходит</div>
+    <h2>Четыре <em>простых шага</em></h2>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Знакомство</h3>
+        <p>Напишите мне в Telegram, расскажите о вашей паре и о дне мечты.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Встреча</h3>
+        <p>Созвонимся, обсудим детали, тайминг и места съёмки.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>День</h3>
+        <p>Снимаю ваш день спокойно и внимательно, без лишней суеты.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h3>Готовые кадры</h3>
+        <p>Через 3–4 недели пришлю ссылку на все фотографии.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FORM -->
+<section>
+  <div class="wrap">
+    <div class="section-eyebrow">Заявка</div>
+    <h2>Расскажите <em>о вашем дне</em></h2>
+    <p class="lead">Напишите пару слов — дату, место и что для вас важно. Отвечу в Telegram в течение дня.</p>
+
+    <form class="form-wrap" id="leadForm" autocomplete="off">
+      <div class="form-row">
+        <label for="name">Ваше имя</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-row">
+        <label for="phone">Телефон или Telegram</label>
+        <input type="text" id="phone" name="phone" required>
+      </div>
+      <div class="form-row">
+        <label for="date">Дата свадьбы</label>
+        <input type="text" id="date" name="date" placeholder="например, 14 июня 2026">
+      </div>
+      <div class="form-row">
+        <label for="comment">Пожелания</label>
+        <textarea id="comment" name="comment" placeholder="Где планируете съёмку, сколько гостей, что хочется поймать в кадре"></textarea>
+      </div>
+      <button type="submit" class="btn">Отправить заявку</button>
+      <div class="form-status" id="leadStatus"></div>
+    </form>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section class="contact">
+  <div class="wrap">
+    <div class="section-eyebrow">Контакты</div>
+    <div class="tg">Напишите мне в <a href="https://t.me/z_jennifer" target="_blank" rel="noopener">Telegram</a></div>
+    <a class="btn" href="https://t.me/z_jennifer" target="_blank" rel="noopener">@z_jennifer</a>
+    <div class="meta" style="margin-top:28px">Москва · съёмка свадеб</div>
+  </div>
+</section>
+
+<footer>
+  © <span id="y"></span> Диана Carajelaeasco · Свадебный фотограф, Москва
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  // Форма работает в предпросмотре. После публикации заявки сохраняются отдельно.
+  const form = document.getElementById('leadForm');
+  const status = document.getElementById('leadStatus');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.textContent = 'Отправляем…';
+    status.className = 'form-status';
+    const data = Object.fromEntries(new FormData(form).entries());
+    try {
+      const r = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const j = await r.json().catch(() => ({}));
+      if (r.ok && j.ok) {
+        status.textContent = 'Заявка отправлена. Напишу вам в течение дня ✨';
+        status.className = 'form-status ok';
+        form.reset();
+      } else {
+        status.textContent = 'Не удалось отправить. Напишите мне в Telegram — @z_jennifer';
+        status.className = 'form-status err';
+      }
+    } catch {
+      status.textContent = 'Не удалось отправить. Напишите мне в Telegram — @z_jennifer';
+      status.className = 'form-status err';
+    }
+  });
+</script>
+
+</body>
+</html>

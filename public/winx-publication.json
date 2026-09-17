@@ -1,0 +1,1 @@
+{"version":1,"forms":[{"path":"/api/lead","fields":["name","phone","date","comment"],"requiredFields":["name","phone"]}]}
